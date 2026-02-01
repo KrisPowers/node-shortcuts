@@ -264,5 +264,110 @@
             "import wasi from 'node:wasi';"
         ],
         "description": "Node.js WASI Import"
+    },
+    "Node.js Import Template": {
+        "prefix": ["#i", "#import"],
+        "body": [
+            "import '' from '';"
+        ],
+        "description": "Node.js Import Template"
+    },
+    "Node.js Export Template": {
+        "prefix": ["#e", "#export"],
+        "body": [
+            "export {};"
+        ],
+        "description": "Node.js Export Template"
+    },
+    "Node.js Log": {
+        "prefix": "#log",
+        "body": [
+            "console.log();"
+        ],
+        "description": "Node.js Log"
+    },
+    "Node.js Log Variable": {
+        "prefix": "#logVar",
+        "body": [
+            "console.log('VALUE:', variable);"
+        ],
+        "description": "Node.js Log Variable"
+    },
+    "Node.js Error Log": {
+        "prefix": "#errorLog",
+        "body": [
+            "console.error('ERROR:', error);"
+        ],
+        "description": "Node.js Error Log"
+    },
+    "Node.js Warn Log": {
+        "prefix": "#warnLog",
+        "body": [
+            "console.warn('WARNING:', message);"
+        ],
+        "description": "Node.js Warn Log"
+    },
+    "Node.js Async Read File (FS)": {
+        "prefix": "#readFileAsync",
+        "body": [
+            "const data = await fsPromises.readFile('file.txt', 'utf8');"
+        ],
+        "description": "Node.js Async Read File (FS)"
+    },
+    "Node.js Async Write File (FS)": {
+        "prefix": "#writeFileAsync",
+        "body": [
+            "await fsPromises.writeFile('file.txt', 'data', 'utf8');"
+        ],
+        "description": "Node.js Async Write File (FS)"
+    },
+    "Node.js JSON Parse": {
+        "prefix": "#jasonParse",
+        "body": [
+            "const obj = JSON.parse(jsonString);"
+        ],
+        "description": "Node.js JSON Parse"
+    },
+    "Node.js JSON Stringify": {
+        "prefix": "#jsonStringify",
+        "body": [
+            "const jsonString = JSON.stringify(obj, null, 2);"
+        ],
+        "description": "Node.js JSON Stringify"
+    },
+    "Node.js ENV Variable": {
+        "prefix": "#envVar",
+        "body": [
+            "const value = process.env.VAR_NAME;"
+        ],
+        "description": "Node.js ENV Variable"
+    },
+    "Node.js Delay": {
+        "prefix": "#delay",
+        "body": [
+            "await new Promise(resolve => setTimeout(resolve, 1000));"
+        ],
+        "description": "Node.js Delay"
+    },
+    "Node.js Read Directory (FS Promises)": {
+        "prefix": "#readDir",
+        "body": [
+            "const files = await fsPromises.readdir('.');"
+        ],
+        "description": "Node.js Read Directory (FS Promises)"
+    },
+    "Node.js Make Directory (FS Promises)": {
+        "prefix": "#mkdir",
+        "body": [
+            "await fsPromises.mkdir('newFolder', { recursive: true });"
+        ],
+        "description": "Node.js Make Directory (FS Promises)"
+    },
+    "Node.js Delete File (FS Promises)": {
+        "prefix": ["#deleteFile", "#delFile"],
+        "body": [
+            "await fsPromises.unlink('file.txt');"
+        ],
+        "description": "Node.js Delete File (FS Promises)"
     }
 }
