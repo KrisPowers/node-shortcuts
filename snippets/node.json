@@ -1,0 +1,306 @@
+{
+    "Node.js HTTP Import": {
+        "prefix": "@http",
+        "scope": "javascript",
+        "body": [
+            "import http from 'node:http';"
+        ],
+        "description": "Node.js HTTP Import"
+    },
+    "Node.js HTTPS Import": {
+        "prefix": "@https",
+        "scope": "javascript",
+        "body": [
+            "import https from 'node:https';"
+        ],
+        "description": "Node.js HTTPS Import"
+    },
+    "Node.js NET Import": {
+        "prefix": "@net",
+        "scope": "javascript",
+        "body": [
+            "import net from 'node:net';"
+        ],
+        "description": "Node.js NET Import"
+    },
+    "Node.js DGRAM Import": {
+        "prefix": "@dgram",
+        "scope": "javascript",
+        "body": [
+            "import dgram from 'node:dgram';"
+        ],
+        "description": "Node.js DGRAM Import"
+    },
+    "Node.js FS Import": {
+        "prefix": "@fs",
+        "scope": "javascript",
+        "body": [
+            "import fs from 'node:fs';"
+        ],
+        "description": "Node.js FS Import"
+    },
+    "Node.js fsPromises Import": {
+        "prefix": ["@fspromises", "@fsp"],
+        "scope": "javascript",
+        "body": [
+            "import fsPromises from 'node:fs/promises';"
+        ],
+        "description": "Node.js FSPROMISES Import"
+    },
+    "Node.js Path Import": {
+        "prefix": "@path",
+        "scope": "javascript",
+        "body": [
+            "import path from 'node:path';"
+        ],
+        "description": "Node.js PATH Import"
+    },
+    "Node.js OS Import": {
+        "prefix": "@os",
+        "scope": "javascript",
+        "body": [
+            "import os from 'node:os';"
+        ],
+        "description": "Node.js OS Import"
+    },
+    "Node.js PROCESS Import": {
+        "prefix": "@process",
+        "scope": "javascript",
+        "body": [
+            "import process from 'node:process';"
+        ],
+        "description": "Node.js PROCESS Import"
+    },
+    "Node.js STREAM Import": {
+        "prefix": "@stream",
+        "scope": "javascript",
+        "body": [
+            "import stream from 'node:stream';"
+        ],
+        "description": "Node.js STREAM Import"
+    },
+    "Node.js BUFFER Import": {
+        "prefix": "@buffer",
+        "scope": "javascript",
+        "body": [
+            "import buffer from 'node:buffer';"
+        ],
+        "description": "Node.js BUFFER Import"
+    },
+    "Node.js URL Import": {
+        "prefix": "@url",
+        "scope": "javascript",
+        "body": [
+            "import url from 'node:url';"
+        ],
+        "description": "Node.js URL Import"
+    },
+    "Node.js QUERYSTRING Import": {
+        "prefix": ["@querystring", "@qs"],
+        "scope": "javascript",
+        "body": [
+            "import querystring from 'node:querystring';"
+        ],
+        "description": "Node.js QUERYSTRING Import"
+    },
+    "Node.js PUNYCODE Import": {
+        "prefix": ["@punycode", "@pc", "@puny"],
+        "scope": "javascript",
+        "body": [
+            "import punycode from 'node:punycode';"
+        ],
+        "description": "Node.js PUNYCODE Import"
+    },
+    "Node.js CRYPTO Import": {
+        "prefix": "@crypto",
+        "scope": "javascript",
+        "body": [
+            "import crypto from 'node:crypto';"
+        ],
+        "description": "Node.js CRYPTO Import"
+    },
+    "Node.js TLS Import": {
+        "prefix": "@tls",
+        "scope": "javascript",
+        "body": [
+            "import tls from 'node:tls';"
+        ],
+        "description": "Node.js TLS Import"
+    },
+    "Node.js ZLIB Import": {
+        "prefix": "@zlib",
+        "scope": "javascript",
+        "body": [
+            "import zlib from 'node:zlib';"
+        ],
+        "description": "Node.js ZLIB Import"
+    },
+    "Node.js UTIL Import": {
+        "prefix": "@util",
+        "scope": "javascript",
+        "body": [
+            "import util from 'node:util';"
+        ],
+        "description": "Node.js UTIL Import"
+    },
+    "Node.js EVENTS Import": {
+        "prefix": "@events",
+        "scope": "javascript",
+        "body": [
+            "import events from 'node:events';"
+        ],
+        "description": "Node.js EVENTS Import"
+    },
+    "Node.js ASSERT Import": {
+        "prefix": "@assert",
+        "scope": "javascript",
+        "body": [
+            "import assert from 'node:assert';"
+        ],
+        "description": "Node.js ASSERT Import"
+    },
+    "Node.js STRING DECODER Import": {
+        "prefix": ["@stringdecoder", "@sd"],
+        "scope": "javascript",
+        "body": [
+            "import stringDecoder from 'node:string_decoder';"
+        ],
+        "description": "Node.js STRING DECODER Import"
+    },
+    "Node.js CHILD PROCESS Import": {
+        "prefix": ["@childprocess", "@cp"],
+        "scope": "javascript",
+        "body": [
+            "import childProcess from 'node:child_process';"
+        ],
+        "description": "Node.js CHILD PROCESS Import"
+    },
+    "Node.js WORKER THREADS Import": {
+        "prefix": ["@workerthreads", "@wt"],
+        "scope": "javascript",
+        "body": [
+            "import workerThreads from 'node:worker_threads';"
+        ],
+        "description": "Node.js WORKER THREADS Import"
+    },
+    "Node.js CLUSTER Import": {
+        "prefix": "@cluster",
+        "scope": "javascript",
+        "body": [
+            "import cluster from 'node:cluster';"
+        ],
+        "description": "Node.js CLUSTER Import"
+    },
+    "Node.js PERF HOOKS Import": {
+        "prefix": ["@perfhooks", "@perf"],
+        "scope": "javascript",
+        "body": [
+            "import perfHooks from 'node:perf_hooks';"
+        ],
+        "description": "Node.js PERF HOOKS Import"
+    },
+    "Node.js INSPECTOR Import": {
+        "prefix": "@inspector",
+        "scope": "javascript",
+        "body": [
+            "import inspector from 'node:inspector';"
+        ],
+        "description": "Node.js INSPECTOR Import"
+    },
+    "Node.js DIAGNOSTICS CHANNEL Import": {
+        "prefix": ["@diagnostics", "@dc"],
+        "scope": "javascript",
+        "body": [
+            "import diagnosticsChannel from 'node:diagnostics_channel';"
+        ],
+        "description": "Node.js DIAGNOSTICS CHANNEL Import"
+    },
+    "Node.js MODULE Import": {
+        "prefix": "@module",
+        "scope": "javascript",
+        "body": [
+            "import module from 'node:module';"
+        ],
+        "description": "Node.js MODULE Import"
+    },
+    "Node.js VM Import": {
+        "prefix": "@vm",
+        "scope": "javascript",
+        "body": [
+            "import vm from 'node:vm';"
+        ],
+        "description": "Node.js VM Import"
+    },
+    "Node.js TIMERS Import": {
+        "prefix": "@timers",
+        "scope": "javascript",
+        "body": [
+            "import timers from 'node:timers';"
+        ],
+        "description": "Node.js TIMERS Import"
+    },
+    "Node.js TIMERS PROMISES Import": {
+        "prefix": ["@timerspromises", "@tp"],
+        "scope": "javascript",
+        "body": [
+            "import timersPromises from 'node:timers/promises';"
+        ],
+        "description": "Node.js TIMERS PROMISES Import"
+    },
+    "Node.js REPL Import": {
+        "prefix": "@repl",
+        "scope": "javascript",
+        "body": [
+            "import repl from 'node:repl';"
+        ],
+        "description": "Node.js REPL Import"
+    },
+    "Node.js READLINE Import": {
+        "prefix": "@readline",
+        "scope": "javascript",
+        "body": [
+            "import readline from 'node:readline';"
+        ],
+        "description": "Node.js READLINE Import"
+    },
+    "Node.js TTY Import": {
+        "prefix": "@tty",
+        "scope": "javascript",
+        "body": [
+            "import tty from 'node:tty';"
+        ],
+        "description": "Node.js TTY Import"
+    },
+    "Node.js DNS Import": {
+        "prefix": "@dns",
+        "scope": "javascript",
+        "body": [
+            "import dns from 'node:dns';"
+        ],
+        "description": "Node.js DNS Import"
+    },
+    "Node.js DNS PROMISES Import": {
+        "prefix": ["@dnspromises", "@dnsp"],
+        "scope": "javascript",
+        "body": [
+            "import dnsPromises from 'node:dns/promises';"
+        ],
+        "description": "Node.js DNS PROMISES Import"
+    },
+    "Node.js V8 Import": {
+        "prefix": "@v8",
+        "scope": "javascript",
+        "body": [
+            "import v8 from 'node:v8';"
+        ],
+        "description": "Node.js V8 Import"
+    },
+    "Node.js WASI Import": {
+        "prefix": "@wasi",
+        "scope": "javascript",
+        "body": [
+            "import wasi from 'node:wasi';"
+        ],
+        "description": "Node.js WASI Import"
+    }
+}

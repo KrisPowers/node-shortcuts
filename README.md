@@ -1,2 +1,15 @@
-# node-shortcuts
-Node Shorcuts builds Node.js snippets into your IDE, saving you time.
+Shortcuts
+
+.i / .import
+
+Builds import line for node's built in packages
+
+I.e
+
+.ifs
+.importfs
+.ipath
+.importpath
+
+@ for import/const
+# for code snippets

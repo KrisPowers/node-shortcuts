@@ -1,0 +1,21 @@
+{
+  "name": "node-shortcuts",
+  "version": "1.0.0",
+  "description": "Node Shortcut snippets",
+  "main": "sync-snippets.js",
+  "scripts": {
+    "postinstall": "node sync-snippets.js"
+  },
+  "keywords": [],
+  "author": "krispowers",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "sync-snippets.js",
+    "snippets/",
+    "README.md",
+    "LICENSE"
+  ]
+}
