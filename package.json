@@ -1,6 +1,6 @@
 {
   "name": "node-shortcuts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Node Shortcut snippets",
   "main": "sync-snippets.js",
   "scripts": {
