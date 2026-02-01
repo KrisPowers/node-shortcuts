@@ -6,9 +6,9 @@ import path from 'path';
 import os from 'os';
 
 // -----------------------------
-// Source file (canonical snippets)
+// Remote source file (canonical snippets)
 // -----------------------------
-const SOURCE_FILE = path.resolve('./snippets/node.json');
+const SOURCE_URL = 'https://node-snippets.krispowers.dev/vsc.json';
 
 // -----------------------------
 // Cross-platform VS Code + Insiders targets
@@ -37,7 +37,6 @@ function getVSCodeTargets() {
     }
   })();
 
-  // Return all combinations: each base × each file
   return bases.flatMap(base => files.map(file => path.join(base, file)));
 }
 
@@ -50,10 +49,8 @@ function readJSON(file) {
   let raw = fs.readFileSync(file, 'utf8');
   if (!raw.trim()) return {};
 
-  // Strip comments
   raw = raw.replace(/\/\/.*$/gm, '');
   raw = raw.replace(/\/\*[\s\S]*?\*\//g, '');
-  // Strip trailing commas
   raw = raw.replace(/,\s*([}\]])/g, '$1');
 
   return JSON.parse(raw);
@@ -75,23 +72,37 @@ function writeJSON(file, data) {
 }
 
 // -----------------------------
+// Fetch remote JSON source
+// -----------------------------
+async function fetchRemoteSnippets() {
+  const res = await fetch(SOURCE_URL);
+  if (!res.ok) throw new Error(`Failed to fetch snippets: ${res.status}`);
+  return await res.json();
+}
+
+// -----------------------------
 // Sync snippets
 // -----------------------------
-function sync(target) {
-  const sourceSnippets = readJSON(SOURCE_FILE);
-  const userSnippets = readJSON(target);
-
+function mergeSnippets(userSnippets, sourceSnippets) {
   let added = 0;
   let updated = 0;
 
   for (const [key, snippet] of Object.entries(sourceSnippets)) {
     if (!userSnippets[key]) added++;
     else if (JSON.stringify(userSnippets[key]) !== JSON.stringify(snippet)) updated++;
-
     userSnippets[key] = snippet;
   }
 
-  writeJSON(target, userSnippets);
+  return { merged: userSnippets, added, updated };
+}
+
+async function sync(target) {
+  const sourceSnippets = await fetchRemoteSnippets();
+  const userSnippets = readJSON(target);
+
+  const { merged, added, updated } = mergeSnippets(userSnippets, sourceSnippets);
+
+  writeJSON(target, merged);
 
   console.log(`✔ Synced: ${target}`);
   console.log(`  ➕ Added: ${added}`);
@@ -101,17 +112,20 @@ function sync(target) {
 // -----------------------------
 // Run sync for all targets
 // -----------------------------
-try {
-  const TARGETS = getVSCodeTargets();
-  for (const target of TARGETS) {
-    try {
-      sync(target);
-    } catch (err) {
-      console.warn(`⚠ Skipped invalid snippet file: ${target}`);
+(async () => {
+  try {
+    const TARGETS = getVSCodeTargets();
+    for (const target of TARGETS) {
+      try {
+        await sync(target);
+      } catch (err) {
+        console.warn(`⚠ Skipped invalid snippet file: ${target}`);
+        console.error(err.message);
+      }
     }
+  } catch (err) {
+    console.error('❌ Snippet sync failed');
+    console.error(err);
+    process.exit(1);
   }
-} catch (err) {
-  console.error('❌ Snippet sync failed');
-  console.error(err);
-  process.exit(1);
-}
+})();
