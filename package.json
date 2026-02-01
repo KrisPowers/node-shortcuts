@@ -4,10 +4,10 @@
   "description": "Node Shortcut snippets",
   "main": "sync-snippets.js",
   "scripts": {
-      "postinstall": "node sync-snippets.js",
-      "preuninstall": "node cleanup-snippets.js"
+    "postinstall": "node sync-snippets.js",
+    "preuninstall": "node cleanup-snippets.js"
   },
-  "keywords": [],
+  "keywords": ["node", "shortcuts", "snippets", "visual studio code", "vsc"],
   "author": "krispowers",
   "license": "MIT",
   "engines": {
@@ -15,8 +15,7 @@
   },
   "files": [
     "sync-snippets.js",
-    "cleanup-snippets",
-    "snippets/",
+    "cleanup-snippets.js",
     "README.md",
     "LICENSE"
   ]
