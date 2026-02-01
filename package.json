@@ -14,8 +14,7 @@
     "node": ">=16.0.0"
   },
   "files": [
-    "sync-snippets.js",
-    "cleanup-snippets.js",
+    "lib/",
     "README.md",
     "LICENSE"
   ]
