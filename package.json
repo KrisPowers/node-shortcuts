@@ -2,10 +2,10 @@
   "name": "node-shortcuts",
   "version": "1.2.0",
   "description": "Node Shortcut snippets",
-  "main": "sync-snippets.js",
+  "main": "./lib/sync-snippets.js",
   "scripts": {
-    "postinstall": "node sync-snippets.js",
-    "preuninstall": "node cleanup-snippets.js"
+    "postinstall": "node ./lib/sync-snippets.js",
+    "preuninstall": "node ./lib/cleanup-snippets.js"
   },
   "keywords": ["node", "shortcuts", "snippets", "visual studio code", "vsc"],
   "author": "krispowers",
