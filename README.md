@@ -45,10 +45,13 @@ Covers all major Node.js core modules, including:
 
 ## Installation
 ```bash
-npm i node-shorcuts -D
+npm i node-shortcuts -D
+```
+You may need to restart VSC/VSC-I via:
+```text
+Ctrl + Shift + P → Reload Window
 ```
 
-.vscode/node.code-snippets
 Snippets load automatically when the workspace opens.
 
 ### Node Version
