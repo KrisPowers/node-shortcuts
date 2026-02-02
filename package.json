@@ -5,7 +5,7 @@
   "main": "./lib/sync-snippets.js",
   "scripts": {
     "postinstall": "node ./lib/sync-snippets.js",
-    "preuninstall": "node ./lib/cleanup-snippets.js"
+    "preuninstall": "node ./lib/sync-snippets.js"
   },
   "keywords": ["node", "shortcuts", "snippets", "visual studio code", "vsc"],
   "author": "krispowers",
