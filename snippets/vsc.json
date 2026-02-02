@@ -369,5 +369,75 @@
             "await fsPromises.unlink('file.txt');"
         ],
         "description": "Node.js Delete File (FS Promises)"
+    },
+    "Node.js Check for File (FS)": {
+        "prefix": ["#checkFileExists", "#cfe"],
+        "body": [
+            "const exists = fs.existsSync('file.txt');"
+        ],
+        "description": "Node.js Check for File (FS)"
+    },
+    "Node.js Current Directory": {
+        "prefix": "#dir",
+        "body": [
+            "process.cwd()"
+        ],
+        "description": "Node.js Current Directory"
+    },
+    "Node.js Directory Name": {
+        "prefix": "#dn",
+        "body": [
+            "__dirname"
+        ],
+        "description": "Node.js Directory Name"
+    },
+    "Node.js File Name": {
+        "prefix": "#fn",
+        "body": [
+            "__filename"
+        ],
+        "description": "Node.js File Name"
+    },
+    "Node.js Read JSON File (FS Promises)": {
+        "prefix": "#readjson",
+        "body": [
+            "const data = await fsPromises.readFile('data.json', 'utf8');",
+            "const json = JSON.parse(data);"
+        ],
+        "description": "Node.js Read JSON File (FS Promises)"
+    },
+    "Node.js Try Catch": {
+        "prefix": ["#tryCatch", "#tc"],
+        "body": [
+            "try {",
+            "  ",
+            "} catch (err) {",
+            "  console.error(err);",
+            "}",
+            ""
+        ],
+        "description": "Node.js Try Catch"
+    },
+    "Node.js Require Stream": {
+        "prefix": "#stream",
+        "body": [
+            "import { Readable, Writable } from 'node:stream';",
+            ""
+        ],
+        "description": "Node.js Require Stream"
+    },
+    "Node.js Create Read Stream (FS)": {
+        "prefix": "#readstream",
+        "body": [
+            "const stream = fs.createReadStream('file.txt', 'utf8');"
+        ],
+        "description": "Node.js Create Read Stream (FS)"
+    },
+    "Node.js Create Write Stream (FS)": {
+        "prefix": "#writestream",
+        "body": [
+            "const stream = fs.createWriteStream('file.txt', { flags: 'w' });"
+        ],
+        "description": "Node.js Create Write Stream (FS)"
     }
 }
