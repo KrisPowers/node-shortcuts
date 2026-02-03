@@ -268,21 +268,21 @@
     "Node.js Import Template": {
         "prefix": ["#i", "#import"],
         "body": [
-            "import '' from '';"
+            "import '$1' from '$2';$0"
         ],
         "description": "Node.js Import Template"
     },
     "Node.js Export Template": {
         "prefix": ["#e", "#export"],
         "body": [
-            "export {};"
+            "export { $1 };$0"
         ],
         "description": "Node.js Export Template"
     },
     "Node.js Log": {
         "prefix": "#log",
         "body": [
-            "console.log();"
+            "console.log($1);$0"
         ],
         "description": "Node.js Log"
     },
@@ -352,21 +352,21 @@
     "Node.js Read Directory (FS Promises)": {
         "prefix": "#readDir",
         "body": [
-            "const files = await fsPromises.readdir('.');"
+            "const files = await fsPromises.readdir('.$1');$0"
         ],
         "description": "Node.js Read Directory (FS Promises)"
     },
     "Node.js Make Directory (FS Promises)": {
         "prefix": "#mkdir",
         "body": [
-            "await fsPromises.mkdir('newFolder', { recursive: true });"
+            "await fsPromises.mkdir('newFolder$1', { recursive: true });$0"
         ],
         "description": "Node.js Make Directory (FS Promises)"
     },
     "Node.js Delete File (FS Promises)": {
         "prefix": ["#deleteFile", "#delFile"],
         "body": [
-            "await fsPromises.unlink('file.txt');"
+            "await fsPromises.unlink('file.txt$1');$0"
         ],
         "description": "Node.js Delete File (FS Promises)"
     },
@@ -410,10 +410,10 @@
         "prefix": ["#tryCatch", "#tc"],
         "body": [
             "try {",
-            "  ",
+            "  $1",
             "} catch (err) {",
             "  console.error(err);",
-            "}",
+            "}$0",
             ""
         ],
         "description": "Node.js Try Catch"
@@ -429,14 +429,14 @@
     "Node.js Create Read Stream (FS)": {
         "prefix": "#readstream",
         "body": [
-            "const stream = fs.createReadStream('file.txt', 'utf8');"
+            "const stream = fs.createReadStream('file.txt$1', 'utf8');$0"
         ],
         "description": "Node.js Create Read Stream (FS)"
     },
     "Node.js Create Write Stream (FS)": {
         "prefix": "#writestream",
         "body": [
-            "const stream = fs.createWriteStream('file.txt', { flags: 'w' });"
+            "const stream = fs.createWriteStream('file.txt$1', { flags: 'w' });$0"
         ],
         "description": "Node.js Create Write Stream (FS)"
     }
