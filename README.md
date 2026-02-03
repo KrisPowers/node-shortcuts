@@ -48,9 +48,6 @@ Covers all major Node.js core modules, including:
 npm i node-shortcuts -D
 ```
 You may need to restart VSC/VSC-I via:
-```text
-Ctrl + Shift + P → Reload Window
-```
 
 Snippets load automatically when the workspace opens.
 
